@@ -15,12 +15,20 @@ class BillComputerTests: XCTestCase {
   
   class BillComputerStub: BillComputer {
     override func compute(_ bills: [Bill]) -> Double {
-      return 100
+      return 100.0
     }
   }
 
   func test_billComputer_sets_totalOwing() {
-    
+    //Arrange
+    let sut = Person(firstName: "", lastName: "")
+    let bills = [Bill(amount: 20.0)]
+    let stub = BillComputerStub()
+    let expected = 100.0
+    //Act
+    sut.totalOwing(for: bills, with: stub)
+    //Assert
+    XCTAssertEqual(expected, sut.totalOwing)
   }
   
 }

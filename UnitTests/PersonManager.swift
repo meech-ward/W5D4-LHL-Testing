@@ -10,7 +10,7 @@ import Foundation
 
 class PersonManager {
   
-  func save(person: Data, with defaults: UserDefaults){
+  func save(person: Data, with defaults: UserDefaultsProtocol){
     defaults.set(person, forKey: "personKey")
   }
   

@@ -52,7 +52,7 @@ class Person: NSObject, NSCoding {
   
   //MARK: Bills (State Test)
   
-  var bills = [Bill]()
+  var bills: [Bill] = []
   
   func pay(_ bill: Bill) {
     bills.append(bill)
